@@ -28,6 +28,7 @@ namespace DesafioFundamentos.Models
             else
             {
                 Console.WriteLine("Carro estacionado");
+                veiculos.Add(novaPlaca);
             }
         }
 
