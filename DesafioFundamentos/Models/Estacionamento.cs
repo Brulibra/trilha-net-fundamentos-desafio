@@ -1,3 +1,5 @@
+using System.Numerics;
+
 namespace DesafioFundamentos.Models
 {
     public class Estacionamento
@@ -28,6 +30,7 @@ namespace DesafioFundamentos.Models
             else
             {
                 Console.WriteLine("Carro estacionado");
+                veiculos.Add(novaPlaca);
             }
         }
 
@@ -66,9 +69,15 @@ namespace DesafioFundamentos.Models
             // Verifica se há veículos no estacionamento
             if (veiculos.Any())
             {
-                Console.WriteLine("Os veículos estacionados são:");
-                // TODO: Realizar um laço de repetição, exibindo os veículos estacionados
-                // *IMPLEMENTE AQUI*
+                Console.WriteLine("Os veículos estacionados são:\n");
+                int contagemVeículos = 1;
+                foreach (string veiculo in veiculos)
+                {
+                    Console.WriteLine($"{contagemVeículos}  {veiculo}");
+                    contagemVeículos++;
+                }
+
+                Console.WriteLine($"\nTotal de veículos estacionados {veiculos.Count}");
             }
             else
             {
