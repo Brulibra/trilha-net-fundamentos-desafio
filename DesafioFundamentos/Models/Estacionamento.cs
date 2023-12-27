@@ -19,13 +19,9 @@ namespace DesafioFundamentos.Models
             Console.WriteLine("Digite a placa do veículo para estacionar:");
             string novaPlaca = Console.ReadLine();
 
-            if (novaPlaca == "")
+            if (novaPlaca == "" || novaPlaca.Length != 8 || novaPlaca.Contains("-") == false)
             {
-                Console.WriteLine("Por favor, insira a placa do carro que deseja estacionar \n Retornando ao Menu Inicual\n");
-            }
-            else if (novaPlaca.Length != 8)
-            {
-                Console.WriteLine("O formato da placa deve ser ###-#### \n Retornando ao Menu Inicual\n");
+                Console.WriteLine("Por favor, insira a placa do carro que deseja estacionar \n O formato da placa deve ser ###-#### \n Retornando ao Menu Inicual\n");
             }
             else
             {
